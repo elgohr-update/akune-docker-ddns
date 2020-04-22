@@ -9,7 +9,7 @@ COPY rest-api /root/go/src/dyndns
 RUN cd /root/go/src/dyndns && go get && go test -v
 
 FROM debian:buster-slim
-MAINTAINER David Prandzioch <hello+ddns@davd.eu>
+MAINTAINER Alexander Kune <alexander@kune.de>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 	apt-get install -q -y bind9 dnsutils && \

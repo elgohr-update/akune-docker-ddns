@@ -1,5 +1,7 @@
 # Dynamic DNS with Docker, Go and Bind9
 
+This project has been forked from https://github.com/dprandzioch/docker-ddns.
+
 This package allows you to set up a dynamic DNS server that allows you to connect to
 devices at home from anywhere in the world. All you need is a cheap VPS, a domain and access to it's nameserver.
 
@@ -22,7 +24,7 @@ docker run -it -d \
     -e ZONE=example.org \
     -e RECORD_TTL=3600 \
     --name=dyndns \
-    davd/docker-ddns:latest
+    kune/docker-ddns:latest
 ```
 
 If you want to persist DNS configuration across container recreation, add `-v /somefolder:/var/cache/bind`. If you are experiencing any 
